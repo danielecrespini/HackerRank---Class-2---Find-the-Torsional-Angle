@@ -1,21 +1,22 @@
 # this is about the HackerRank test: Class 2 - Find the Torsional Angle
-# https://www.hackerrank.com/challenges/class-2-find-the-torsional-angle/problem I found many solutions around but
-# nobody explained really the code. Also the problem description itself might bring confusion for the way it is
-# written. I will try to go as less as possible in Math ground because the test is about Python Classes. In the
-# Problem description, the coordinates are named X, Y and Z. The results of the cross products are named X and Y too,
-# but these values are not related. Mathematicians could name coordinates with lower case x, y and z and leave the
-# cross product names with upper case X and Y to be clear. Instead for the pythonic way to name variables, I wouldn't
-# use upper case anyway in the problem description as you can see in the help code already provided, they are lower
-# cases. The same for the points A, B, C and D, written upper case in the problem description and lower case in the
-# help code
+# https://www.hackerrank.com/challenges/class-2-find-the-torsional-angle/problem 
+
+# I found many solutions around but nobody explained really the code. Also the problem description itself might bring
+# confusion for the way it is written. I will try to go as less as possible in Math ground because the test is about 
+# Python Classes. In the Problem description, the coordinates are named X, Y and Z. The results of the cross products
+# are named X and Y too, but these values are not related. Mathematicians could name coordinates with lower case x, 
+# y and z and leave the cross product names with upper case X and Y to be clear. Instead for the pythonic way to name
+# variables, I wouldn't use upper case anyway in the problem description. As you can see in the help code already 
+# provided, they are lower cases. The same for the points A, B, C and D, written upper case in the problem 
+# description and lower case in the help code 
 import math
 
 
 class Points(object):
-    # these arguments could lead to confusion: most of the people who solved the problem, named these arguments as x,
-    # y, x: besides the naming confusion mentioned above (they are not related to x = (b - a).cross(c - b) and y = (c
+    # these arguments could lead to confusion: most of the people who solved the problem, named these arguments x, y
+    # and z: besides the naming confusion mentioned above (they are not related to x = (b - a).cross(c - b) and y = (c
     # - b).cross(d - c)), these arguments will be assigned not only to the input coordinate values but even to the
-    # results of AB=B-A, BC=C-B and CD=C-D and the results of the cross product. I would rather consider them sort of
+    # results of AB=B-A, BC=C-B and CD=C-D and the results of the cross products. I would rather consider them sort of
     # accumulators. For this reason I will name them u, v, w.
     def __init__(self, u, v, w):
         self.u = u
